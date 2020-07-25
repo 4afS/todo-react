@@ -1,13 +1,7 @@
 import React from 'react';
-import ToDoList from './ToDoList';
-import ToDoForm from './ToDoForm';
-
-class todo {
-  constructor(id, title) {
-    this.id = id;
-    this.title = title;
-  }
-}
+import ToDoList from './ToDo/List';
+import ToDoForm from './ToDo/Form';
+import ToDo from '../Model/ToDo';
 
 export default class ToDoComponent extends React.Component {
   constructor() {
@@ -26,7 +20,7 @@ export default class ToDoComponent extends React.Component {
     this.setState({
       list: [
         ...this.state.list,
-        new todo(
+        new ToDo(
           id,
           this.state.title
         )
